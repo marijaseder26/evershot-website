@@ -13,17 +13,20 @@
   }
   @media (min-width: 768px) {
     .container {
-      width: 750px;
+      max-width: 750px;
+      width: 100%;
     }
   }
   @media (min-width: 992px) {
     .container {
-      width: 970px;
+      max-width: 970px;
+      width: 100%;
     }
   }
   @media (min-width: 1200px) {
     .container {
-      width: 1440px;
+      max-width: 1440px;
+      width: 100%;
     }
   }
 
@@ -93,8 +96,8 @@ form {
     text-decoration: none;
     color: #fff;
     display: flex;
-    position: absolute;
-    left: 0;
+    /* position: absolute;
+    left: 0; */
     margin: 60px;
     max-width: 500px;
     padding: 20px 30px;
@@ -203,7 +206,7 @@ table {
 
 .form-inner {
     min-height: 100vh;
-    background: #08071d;
+    /* background: #08071d; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,7 +214,6 @@ table {
 
 .form-inner form {
     width: 670px;
-    height: 400px;
     display: flex;
     justify-content: center;
     box-shadow: 20px 20px 50px rgba(00,0,0,0.5);
@@ -227,6 +229,8 @@ table {
     margin-top: 20px;
     width: 500px;
     text-align: center;
+    font-size: 46px;
+    margin-bottom: 20px;
 }
 
 .form-inner form input {
@@ -250,19 +254,120 @@ table {
     font-weight: 300;
     width: 600px;
     margin-top: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
-..form-inner form textarea {
-    background: none;
-    border: none;
-    border-bottom: 2px solid #fff;
-    color: #fff;
-    font-weight: 200;
-    font-size: 15px;
-    padding: 10px;
-    outline: none;
-    min-width: 600px;
-    max-width: 600px;
-    min-height: 80px;
-    max-height: 80px;
+.o-nama {
+    color: white;
+}
+
+.o-nama .o-nama-inner {
+    display: flex;
+    margin: 250px 82px;
+}
+
+.o-nama-naslov {
+    width: 50%;
+}
+
+.o-nama-naslov h2 {
+    font-size: 65px;
+}
+
+.o-nama-desno {
+    width: 50%;
+}
+
+.o-nama-tekst {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.o-nama-labela {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.o-nama-brojac-broj {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.o-nama-brojac-labela {
+    font-size: 40px;
+}
+
+@media screen and (max-width:1200px) { /*TABLET*/
+    .logo img {
+        max-width: 190px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:756px) { /*MOBILNI TABLET*/
+    .navbar {
+        height: unset;
+        display: block;
+    }
+    .navbar img {
+        margin: 30px auto;
+    }
+
+    .navbar .links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .links a {
+        font-size: 1.3rem;
+
+    }
+
+    .pocetni-naslov h1 {
+        font-size: 50px;
+    }
+
+    .galerija-sadrzaj {
+        display: block;
+    }
+
+    .galerija-slika {
+        width: 100%;
+    }
+
+    .o-nama .o-nama-inner {
+        display: block;
+        text-align: center;
+        margin: 250px 30px;
+    }
+    .o-nama-naslov {
+        width: 100%;
+    }
+    .o-nama-desno {
+        width: 100%;
+    }
+
+    .form-inner form {
+        width: 100%;
+    }
+}
+
+header .camera{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+
+    animation-name: camera; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear;
+}
+
+@keyframes camera {
+    0%   {top: 85vh; left: 0px;}
+    25%  {top: 90vh;}
+    50%  {top: 95vh;}
+    75%  {top: 90vh;}
+    100% {top: 85vh; left: 100%;}
 }
